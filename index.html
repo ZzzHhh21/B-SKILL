@@ -5,54 +5,19 @@
     <!-- Meta tags -->
     <meta
       name="description"
-      content="[CoRL 2025] Dexplore: Scalable Neural Control for Dexterous Manipulation from Reference‑Scoped Exploration"
+      content="B-SKILL: Contact-Aware Bimanual Skill Learning for Generalizable Humanoid Manipulation"
     />
     <meta name="keywords" content="Dexplore" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Social preview image，沿用 Dexplore 的图 -->
-    <meta
-      property="og:image"
-      content="https://sirui-xu.github.io/dexplore/static/images/teaser_small.png"
-    />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-
-    <title>Dexplore-style Dex-Hand Demo</title>
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="https://sirui-xu.github.io/dexplore/static/images/favicon.ico"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-      rel="stylesheet"
-    />
-
-    <!-- 直接引用 Dexplore 线上样式 -->
+    <!-- 本地引用 Dexplore 的基础样式（已下载到 static/css/ 下） -->
     <link
       rel="stylesheet"
-      href="https://sirui-xu.github.io/dexplore/static/css/bulma.min.css"
+      href="static/css/bulma.min.css"
     />
     <link
       rel="stylesheet"
-      href="https://sirui-xu.github.io/dexplore/static/css/bulma-carousel.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://sirui-xu.github.io/dexplore/static/css/bulma-slider.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://sirui-xu.github.io/dexplore/static/css/fontawesome.all.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://sirui-xu.github.io/dexplore/static/css/index.css"
+      href="static/css/index.css"
     />
   </head>
   <body>
@@ -63,56 +28,17 @@
             <div class="column has-text-centered">
               <h1 class="title is-2 publication-title">
                 <span style="font-variant: small-caps; color: #32006c4c"
-                  >Dexplore</span
-                >: Scalable Neural Control for Dexterous Manipulation from
-                Reference-Scoped Exploration
+                  >B-SKILL</span
+                >: Contact-Aware Bimanual Skill Learning for Generalizable Humanoid Manipulation
               </h1>
               <div class="is-size-5 publication-authors">
-                <span class="author-block">
-                  <a href="https://sirui-xu.github.io">Sirui Xu</a
-                  ><sup>1,2</sup>,</span
-                >&nbsp
-                <span class="author-block">
-                  <a href="https://research.nvidia.com/person/yu-wei-chao"
-                    >Yu-Wei Chao</a
-                  ><sup>2</sup>,</span
-                >&nbsp
-                <span class="author-block">
-                  <a
-                    href="https://scholar.google.com/citations?user=J2z-0lgAAAAJ&hl=zh-CN"
-                    >Liuyu Bian</a
-                  ><sup>1</sup>,</span
-                >&nbsp
-                <span class="author-block">
-                  <a href="https://cs.gmu.edu/~amousavi">Arsalan Mousavian</a
-                  ><sup>2</sup>,</span
-                >&nbsp
-                <span class="author-block">
-                  <a href="https://yxw.web.illinois.edu">Yu-Xiong Wang</a
-                  ><sup>1</sup><sup>†</sup>,
-                </span>
-                &nbsp
-                <span class="author-block">
-                  <a href="https://lgui.web.illinois.edu">Liang-Yan Gui</a
-                  ><sup>1</sup><sup>†</sup>,
-                </span>
-                &nbsp
-                <span class="author-block">
-                  <a href="http://wyang.me">Wei Yang</a
-                  ><sup>2</sup><sup>†</sup>
-                </span>
+                <span class="author-block">***</span>
               </div>
               <div class="is-size-5 publication-authors">
-                <sup>1</sup>
-                <span class="author-block"
-                  >University of Illinois Urbana-Champaign</span
-                >
-                &nbsp;&nbsp;&nbsp;
-                <sup>2</sup>
-                <span class="author-block">NVIDIA</span>
+                <span class="author-block">***</span>
               </div>
               <div class="is-size-5 publication-authors">
-                <span class="author-block"><sup>†</sup>Equal Advising</span>
+                <span class="author-block">***</span>
               </div>
               <div
                 style="
@@ -122,36 +48,9 @@
                   text-align: center;
                 "
               >
-                CoRL 2025
+                ***
               </div>
-              <div class="column has-text-centered">
-                <div class="publication-links">
-                  <span class="link-block">
-                    <a
-                      href="https://arxiv.org/pdf/2509.09671"
-                      class="external-link button is-normal is-rounded is-dark"
-                    >
-                      <span class="icon">
-                        <i class="ai ai-arxiv"></i>
-                      </span>
-                      <span>Paper</span>
-                    </a>
-                  </span>
-                </div>
-                <br /><br />
-                <div style="text-align: center">
-                  <img
-                    src="https://sirui-xu.github.io/dexplore/static/images/teaser_new.png"
-                    width="100%"
-                  />
-                </div>
-                <p>
-                  Left: A robot hand discover skills that align with its
-                  physical form and human demonstration's intent. Right: A
-                  control policy that takes a partial depth image as input, and
-                  deployed on a real robot system.
-                </p>
-              </div>
+              <div class="column has-text-centered"></div>
             </div>
           </div>
         </div>
@@ -166,31 +65,11 @@
             <h2 class="title is-3">Abstract</h2>
             <div class="content has-text-justified">
               <p>
-                Hand-object motion-capture (MoCap) repositories offer
-                large-scale, contact-rich demonstrations and hold promise for
-                scaling dexterous robotic manipulation. Yet demonstration
-                inaccuracies and embodiment gaps between human and robot hands
-                limit the straightforward use of these data. Existing methods
-                adopt a three-stage workflow, including retargeting, tracking,
-                and residual correction, which often leaves demonstrations
-                underused and compound errors across stages. We introduce
-                Dexplore, a unified single-loop optimization that jointly
-                performs retargeting and tracking to learn robot control
-                policies directly from MoCap at scale. Rather than treating
-                demonstrations as ground truth, we use them as soft guidance.
-                From raw trajectories, we derive adaptive spatial scopes, and
-                train with reinforcement learning to keep the policy in-scope
-                while minimizing control effort and accomplishing the task. This
-                unified formulation preserves demonstration intent, enables
-                robot-specific strategies to emerge, improves robustness to
-                noise, and scales to large demonstration corpora. We distill
-                the scaled tracking policy into a vision-based, skill-
-                conditioned generative controller that encodes diverse
-                manipulation skills in a rich latent representation, supporting
-                generalization across objects and real-world deployment. Taken
-                together, these contributions position Dexplore as a principled
-                bridge that transforms imperfect demonstrations into effective
-                training signals for dexterous manipulation.
+                ********************************************
+                ********************************************
+                ********************************************
+                ********************************************
+                ********************************************
               </p>
             </div>
           </div>
@@ -208,7 +87,6 @@
           </div>
           <br />
           <div class="publication-video">
-            <!-- 这里替换为你自己的视频 demo_1080p.mp4 -->
             <video id="teaser" controls preload loop playsinline>
               <source src="demo_1080p.mp4" type="video/mp4" />
             </video>
@@ -221,11 +99,11 @@
     <section class="section" id="BibTeX">
       <div class="container is-max-desktop content">
         <h2 class="title">BibTeX</h2>
-        <pre><code>@inproceedings{xu2025scalable,
-  title = {Dexplore: Scalable Neural Control for Dexterous Manipulation from Reference-Scoped Exploration},
-  author = {Xu, Sirui and Chao, Yu-Wei and Bian, Liuyu and Mousavian, Arsalan and Wang, Yu-Xiong and Gui, Liang-Yan and Yang, Wei},
-  booktitle = {CoRL},
-  year = {2025},
+        <pre><code>@inproceedings{***
+  title = {B-SKILL: Contact-Aware Bimanual Skill Learning for Generalizable Humanoid Manipulation},
+  author = {***},
+  booktitle = {***},
+  year = {***},
 }</code></pre>
       </div>
     </section>
@@ -236,9 +114,7 @@
           <div class="column is-8">
             <div class="content">
               <p>
-                Thanks to
-                <a href="https://keunhong.com/">Keunhong Park</a> for the
-                <a href="https://nerfies.github.io/">website template</a>.
+                ***
               </p>
             </div>
           </div>
@@ -246,12 +122,5 @@
       </div>
     </footer>
 
-    <!-- JS 脚本同样直接引用 Dexplore 线上资源 -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
-    <script src="https://sirui-xu.github.io/dexplore/static/js/fontawesome.all.min.js"></script>
-    <script src="https://sirui-xu.github.io/dexplore/static/js/bulma-carousel.min.js"></script>
-    <script src="https://sirui-xu.github.io/dexplore/static/js/bulma-slider.min.js"></script>
-    <script src="https://sirui-xu.github.io/dexplore/static/js/index.js"></script>
   </body>
 </html>
