@@ -1,109 +1,257 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dex-Hand: 灵巧手控制与操作演示</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="utf-8" />
+    <!-- Meta tags -->
+    <meta
+      name="description"
+      content="[CoRL 2025] Dexplore: Scalable Neural Control for Dexterous Manipulation from Reference‑Scoped Exploration"
+    />
+    <meta name="keywords" content="Dexplore" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Social preview image，沿用 Dexplore 的图 -->
+    <meta
+      property="og:image"
+      content="https://sirui-xu.github.io/dexplore/static/images/teaser_small.png"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <title>Dexplore-style Dex-Hand Demo</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://sirui-xu.github.io/dexplore/static/images/favicon.ico"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+      rel="stylesheet"
+    />
+
+    <!-- 直接引用 Dexplore 线上样式 -->
+    <link
+      rel="stylesheet"
+      href="https://sirui-xu.github.io/dexplore/static/css/bulma.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://sirui-xu.github.io/dexplore/static/css/bulma-carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://sirui-xu.github.io/dexplore/static/css/bulma-slider.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://sirui-xu.github.io/dexplore/static/css/fontawesome.all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://sirui-xu.github.io/dexplore/static/css/index.css"
+    />
   </head>
   <body>
-    <header class="page-header">
-      <div class="container">
-        <h1 class="title">Dex-Hand: 灵巧手实验演示</h1>
-        <p class="subtitle">
-          这是一个参考
-          <a href="https://sirui-xu.github.io/dexplore/" target="_blank" rel="noreferrer">
-            Dexplore: Scalable Neural Control for Dexterous Manipulation from Reference-Scoped Exploration
-          </a>
-          风格制作的项目主页示例。
-        </p>
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered">
+            <div class="column has-text-centered">
+              <h1 class="title is-2 publication-title">
+                <span style="font-variant: small-caps; color: #32006c4c"
+                  >Dexplore</span
+                >: Scalable Neural Control for Dexterous Manipulation from
+                Reference-Scoped Exploration
+              </h1>
+              <div class="is-size-5 publication-authors">
+                <span class="author-block">
+                  <a href="https://sirui-xu.github.io">Sirui Xu</a
+                  ><sup>1,2</sup>,</span
+                >&nbsp
+                <span class="author-block">
+                  <a href="https://research.nvidia.com/person/yu-wei-chao"
+                    >Yu-Wei Chao</a
+                  ><sup>2</sup>,</span
+                >&nbsp
+                <span class="author-block">
+                  <a
+                    href="https://scholar.google.com/citations?user=J2z-0lgAAAAJ&hl=zh-CN"
+                    >Liuyu Bian</a
+                  ><sup>1</sup>,</span
+                >&nbsp
+                <span class="author-block">
+                  <a href="https://cs.gmu.edu/~amousavi">Arsalan Mousavian</a
+                  ><sup>2</sup>,</span
+                >&nbsp
+                <span class="author-block">
+                  <a href="https://yxw.web.illinois.edu">Yu-Xiong Wang</a
+                  ><sup>1</sup><sup>†</sup>,
+                </span>
+                &nbsp
+                <span class="author-block">
+                  <a href="https://lgui.web.illinois.edu">Liang-Yan Gui</a
+                  ><sup>1</sup><sup>†</sup>,
+                </span>
+                &nbsp
+                <span class="author-block">
+                  <a href="http://wyang.me">Wei Yang</a
+                  ><sup>2</sup><sup>†</sup>
+                </span>
+              </div>
+              <div class="is-size-5 publication-authors">
+                <sup>1</sup>
+                <span class="author-block"
+                  >University of Illinois Urbana-Champaign</span
+                >
+                &nbsp;&nbsp;&nbsp;
+                <sup>2</sup>
+                <span class="author-block">NVIDIA</span>
+              </div>
+              <div class="is-size-5 publication-authors">
+                <span class="author-block"><sup>†</sup>Equal Advising</span>
+              </div>
+              <div
+                style="
+                  font-size: 1.5em;
+                  margin-top: 10px;
+                  font-weight: bold;
+                  text-align: center;
+                "
+              >
+                CoRL 2025
+              </div>
+              <div class="column has-text-centered">
+                <div class="publication-links">
+                  <span class="link-block">
+                    <a
+                      href="https://arxiv.org/pdf/2509.09671"
+                      class="external-link button is-normal is-rounded is-dark"
+                    >
+                      <span class="icon">
+                        <i class="ai ai-arxiv"></i>
+                      </span>
+                      <span>Paper</span>
+                    </a>
+                  </span>
+                </div>
+                <br /><br />
+                <div style="text-align: center">
+                  <img
+                    src="https://sirui-xu.github.io/dexplore/static/images/teaser_new.png"
+                    width="100%"
+                  />
+                </div>
+                <p>
+                  Left: A robot hand discover skills that align with its
+                  physical form and human demonstration's intent. Right: A
+                  control policy that takes a partial depth image as input, and
+                  deployed on a real robot system.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </header>
+    </section>
 
-    <main class="container">
-      <section class="hero">
-        <div class="hero-media">
-          <!-- 使用当前目录下的 demo_1080p.mp4 作为演示视频 -->
-          <video
-            class="hero-video"
-            src="demo_1080p.mp4"
-            controls
-            playsinline
-            poster="poster.png"
-          >
-            您的浏览器不支持 HTML5 视频标签。
-          </video>
-          <p class="media-note">
-            若无法播放，请确认已将
-            <code>demo_1080p.mp4</code> 放在与本页面相同的目录（<code>B-SKILL</code>）下。
-          </p>
+    <section class="hero is-light is-small">
+      <div class="container is-max-desktop">
+        <br />
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Abstract</h2>
+            <div class="content has-text-justified">
+              <p>
+                Hand-object motion-capture (MoCap) repositories offer
+                large-scale, contact-rich demonstrations and hold promise for
+                scaling dexterous robotic manipulation. Yet demonstration
+                inaccuracies and embodiment gaps between human and robot hands
+                limit the straightforward use of these data. Existing methods
+                adopt a three-stage workflow, including retargeting, tracking,
+                and residual correction, which often leaves demonstrations
+                underused and compound errors across stages. We introduce
+                Dexplore, a unified single-loop optimization that jointly
+                performs retargeting and tracking to learn robot control
+                policies directly from MoCap at scale. Rather than treating
+                demonstrations as ground truth, we use them as soft guidance.
+                From raw trajectories, we derive adaptive spatial scopes, and
+                train with reinforcement learning to keep the policy in-scope
+                while minimizing control effort and accomplishing the task. This
+                unified formulation preserves demonstration intent, enables
+                robot-specific strategies to emerge, improves robustness to
+                noise, and scales to large demonstration corpora. We distill
+                the scaled tracking policy into a vision-based, skill-
+                conditioned generative controller that encodes diverse
+                manipulation skills in a rich latent representation, supporting
+                generalization across objects and real-world deployment. Taken
+                together, these contributions position Dexplore as a principled
+                bridge that transforms imperfect demonstrations into effective
+                training signals for dexterous manipulation.
+              </p>
+            </div>
+          </div>
         </div>
-        <div class="hero-text">
-          <h2>项目简介</h2>
-          <p>
-            本页面展示了灵巧手实验的最终演示视频，以及相关的简要说明和引用信息。
-            你可以根据自己的论文标题、作者列表和摘要内容进行自由修改。
-          </p>
-          <ul class="keypoints">
-            <li>演示灵巧手在复杂操作任务中的运动能力</li>
-            <li>对实验设置、算法或控制策略进行简要说明</li>
-            <li>为论文或报告提供一个简洁直观的可视化入口</li>
-          </ul>
+        <br />
+      </div>
+    </section>
+
+    <section class="hero teaser">
+      <div class="container is-max-desktop">
+        <div class="hero-body">
+          <br /><br />
+          <div class="columns is-centered has-text-centered">
+            <h2 class="title is-3">Demo</h2>
+          </div>
+          <br />
+          <div class="publication-video">
+            <!-- 这里替换为你自己的视频 demo_1080p.mp4 -->
+            <video id="teaser" controls preload loop playsinline>
+              <source src="demo_1080p.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <br />
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="section">
-        <h2>摘要（示例占位，可自行修改）</h2>
-        <p>
-          本项目展示了一种用于控制多指灵巧手完成复杂操作任务的实验系统。
-          我们结合仿真与真实平台，对灵巧手的抓取、旋转、重新抓取等技能进行了系统性评估。
-          通过本页面的视频演示，读者可以直观理解实验场景、控制策略与灵巧手在不同任务中的表现。
-        </p>
-      </section>
+    <section class="section" id="BibTeX">
+      <div class="container is-max-desktop content">
+        <h2 class="title">BibTeX</h2>
+        <pre><code>@inproceedings{xu2025scalable,
+  title = {Dexplore: Scalable Neural Control for Dexterous Manipulation from Reference-Scoped Exploration},
+  author = {Xu, Sirui and Chao, Yu-Wei and Bian, Liuyu and Mousavian, Arsalan and Wang, Yu-Xiong and Gui, Liang-Yan and Yang, Wei},
+  booktitle = {CoRL},
+  year = {2025},
+}</code></pre>
+      </div>
+    </section>
 
-      <section class="section">
-        <h2>视频下载</h2>
-        <p>
-          如果浏览器播放不稳定，你也可以直接下载原始视频文件：
-          <a href="demo_1080p.mp4" download>点击这里下载演示视频</a>
-        </p>
-      </section>
-
-      <section class="section">
-        <h2>引用（BibTeX 示例）</h2>
-        <p>如果你需要在论文或报告中引用本实验，可按照自己的格式编写。下面是一个示例：</p>
-        <pre class="bibtex">
-@misc{your2026dexhand,
-  title  = {Dex-Hand: Dexterous Manipulation Experiments},
-  author = {Your Name and Collaborators},
-  year   = {2026},
-  note   = {Project page: your personal website or Git repository URL}
-}
-        </pre>
-      </section>
-
-      <section class="section">
-        <h2>使用说明</h2>
-        <ol class="steps">
-          <li>将你的演示视频文件命名为 <code>demo_1080p.mp4</code>。</li>
-          <li>把该文件直接放在本页面所在目录（<code>B-SKILL</code>）下。</li>
-          <li>在浏览器中打开本目录下的 <code>index.html</code>，即可看到与 Dexplore 风格类似的展示页面和视频播放。</li>
-        </ol>
-      </section>
-    </main>
-
-    <footer class="page-footer">
+    <footer class="footer">
       <div class="container">
-        <p>
-          页面样式参考自
-          <a href="https://sirui-xu.github.io/dexplore/" target="_blank" rel="noreferrer">
-            Dexplore 项目页面
-          </a>
-          的布局风格。
-        </p>
+        <div class="columns is-centered">
+          <div class="column is-8">
+            <div class="content">
+              <p>
+                Thanks to
+                <a href="https://keunhong.com/">Keunhong Park</a> for the
+                <a href="https://nerfies.github.io/">website template</a>.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </footer>
+
+    <!-- JS 脚本同样直接引用 Dexplore 线上资源 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+    <script src="https://sirui-xu.github.io/dexplore/static/js/fontawesome.all.min.js"></script>
+    <script src="https://sirui-xu.github.io/dexplore/static/js/bulma-carousel.min.js"></script>
+    <script src="https://sirui-xu.github.io/dexplore/static/js/bulma-slider.min.js"></script>
+    <script src="https://sirui-xu.github.io/dexplore/static/js/index.js"></script>
   </body>
 </html>
-
-
